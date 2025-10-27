@@ -1,0 +1,18 @@
+#include "main.h"
+
+void LCD_Init(void)
+{
+	HAL_Delay(20);
+}
+
+void LCD_read(void)
+{
+	HAL_GPIO_WritePin(screen_rs_GPIO_Port, screen_rs_Pin, TRUE);
+	HAL_GPIO_WritePin(screen_r_w_GPIO_Port, screen_r_w_Pin_Pin, TRUE);
+}
+
+void LCD_write(void)
+{
+	HAL_GPIO_WritePin(screen_rs_GPIO_Port, screen_rs_Pin, TRUE);
+	HAL_GPIO_WritePin(screen_r_w_GPIO_Port, screen_r_w_Pin_Pin, FALSE);
+}

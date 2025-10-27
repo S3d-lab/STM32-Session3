@@ -1,0 +1,6 @@
+#include "main.h"
+
+LCD_Init()
+{
+	HAL
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Noiseux_S/Drivers/TEP- Session 3 kit 1e/Src/ecran&apos; to &apos;ecran.c&apos;" description="Rename resource &apos;ecran&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/TEP- Session 3 kit 1e/Src/ecran" name="ecran.c" stamp="1761595423425" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Noiseux_S/Drivers/TEP- Session 3 kit 1e/Inc/ecran&apos; to &apos;ecran.h&apos;" description="Rename resource &apos;ecran&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Drivers/TEP- Session 3 kit 1e/Inc/ecran" name="ecran.h" stamp="1761595434478" updateReferences="true"/>
+</session>

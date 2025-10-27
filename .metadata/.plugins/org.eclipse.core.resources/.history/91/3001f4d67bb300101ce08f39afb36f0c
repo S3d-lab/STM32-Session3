@@ -1,0 +1,39 @@
+#include "main.h"
+
+void LCD_Init(void)
+{
+	HAL_Delay(20);
+	LCD_WriteMode();
+
+}
+
+void LCD_ReadMode(void)
+{
+	HAL_GPIO_WritePin(screen_rs_GPIO_Port, screen_rs_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(screen_r_w_GPIO_Port, screen_r_w_Pin_Pin, GPIO_PIN_SET);
+
+	return;
+}
+
+void LCD_WriteMode(void)
+{
+	HAL_GPIO_WritePin(screen_rs_GPIO_Port, screen_rs_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(screen_r_w_GPIO_Port, screen_r_w_Pin_Pin, GPIO_PIN_RESET);
+
+	return;
+}
+
+void LCD_write4bits(u_int8_t data)
+{
+	HAL_GPIO_WritePin(screen_d4_GPIO_Port, screen_d4_Pin, (data & 0x01) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(screen_d5_GPIO_Port, screen_d5_Pin, (data & 0x02) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(screen_d6_GPIO_Port, screen_d6_Pin, (data & 0x04) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(screen_d7_GPIO_Port, screen_d7_Pin, (data & 0x08) ? GPIO_PIN_SET : GPIO_PIN_RESET);
+
+	HAL_GPIO_WritePin(LCD_PORT, LCD_EN_Pin, GPIO_PIN_SET);
+	HAL_Delay(1);
+	HAL_GPIO_WritePin(LCD_PORT, LCD_EN_Pin, GPIO_PIN_RESET);
+	HAL_Delay(1);
+
+	return;
+}
