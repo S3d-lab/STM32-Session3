@@ -101,9 +101,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  uint8_t data[] = "Hello from STM32!\r\n";
-	  CDC_Transmit_FS(data, sizeof(data)-1);
-	  HAL_Delay(1000);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -196,8 +194,8 @@ static void MX_USART1_UART_Init(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-/* USER CODE BEGIN MX_GPIO_Init_1 */
-/* USER CODE END MX_GPIO_Init_1 */
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOC_CLK_ENABLE();
@@ -207,6 +205,10 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LED_BP_GPIO_Port, LED_BP_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, screen_r_w_Pin|screen_en_Pin|screen_d4_Pin|screen_d5_Pin
+                          |screen_d6_Pin|screen_d7_Pin|screen_rs_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : LED_BP_Pin */
   GPIO_InitStruct.Pin = LED_BP_Pin;
@@ -231,8 +233,17 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-/* USER CODE BEGIN MX_GPIO_Init_2 */
-/* USER CODE END MX_GPIO_Init_2 */
+  /*Configure GPIO pins : screen_r_w_Pin screen_en_Pin screen_d4_Pin screen_d5_Pin
+                           screen_d6_Pin screen_d7_Pin screen_rs_Pin */
+  GPIO_InitStruct.Pin = screen_r_w_Pin|screen_en_Pin|screen_d4_Pin|screen_d5_Pin
+                          |screen_d6_Pin|screen_d7_Pin|screen_rs_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */

@@ -77,6 +77,18 @@ void Error_Handler(void);
 #define P2_0_GPIO_Port GPIOB
 #define P2_6_Pin GPIO_PIN_1
 #define P2_6_GPIO_Port GPIOB
+#define screen_r_w_Pin GPIO_PIN_10
+#define screen_r_w_GPIO_Port GPIOB
+#define screen_en_Pin GPIO_PIN_11
+#define screen_en_GPIO_Port GPIOB
+#define screen_d4_Pin GPIO_PIN_12
+#define screen_d4_GPIO_Port GPIOB
+#define screen_d5_Pin GPIO_PIN_13
+#define screen_d5_GPIO_Port GPIOB
+#define screen_d6_Pin GPIO_PIN_14
+#define screen_d6_GPIO_Port GPIOB
+#define screen_d7_Pin GPIO_PIN_15
+#define screen_d7_GPIO_Port GPIOB
 #define P1_7_Pin GPIO_PIN_8
 #define P1_7_GPIO_Port GPIOA
 #define P2_3_Pin GPIO_PIN_3
@@ -91,6 +103,8 @@ void Error_Handler(void);
 #define P2_4_GPIO_Port GPIOB
 #define P2_7_Pin GPIO_PIN_8
 #define P2_7_GPIO_Port GPIOB
+#define screen_rs_Pin GPIO_PIN_9
+#define screen_rs_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

@@ -124,3 +124,83 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-27 13:58:41.540
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-10-28 07:28:34.895 -----------------------------------------------
+eclipse.buildId=Version 1.15.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-28 07:29:18.056
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-28 07:29:18.066
+!MESSAGE Log4j2 initialized with config file C:\Users\1735593\Desktop\STM32-Session3\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-28 07:29:26.158
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-10-28 07:33:40.805 -----------------------------------------------
+eclipse.buildId=Version 1.15.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-28 07:33:55.604
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-28 07:33:55.604
+!MESSAGE Log4j2 initialized with config file C:\Users\1735593\Desktop\STM32-Session3\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-28 07:33:59.818
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-10-28 07:40:19.293 -----------------------------------------------
+eclipse.buildId=Version 1.15.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_CA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-28 07:40:30.763
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-28 07:40:30.763
+!MESSAGE Log4j2 initialized with config file C:\Users\1735593\Desktop\STM32-Session3\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-28 07:40:35.123
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2025-10-28 07:46:14.461 -----------------------------------------------
+eclipse.buildId=Version 1.15.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_CA
+Framework arguments:  C:\Users\1735593\Desktop\STM32-Session3\Noiseux_S\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\1735593\Desktop\STM32-Session3\Noiseux_S\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2025-10-28 07:46:29.123
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2025-10-28 07:46:29.125
+!MESSAGE Log4j2 initialized with config file C:\Users\1735593\Desktop\STM32-Session3\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2025-10-28 07:46:34.549
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 368 2025-10-28 07:46:53.947
+!MESSAGE Resource '/Noiseux_S' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Noiseux_S' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:367)
+	at org.eclipse.core.internal.resources.Project.open(Project.java:1060)
+	at org.eclipse.core.internal.resources.Project.open(Project.java:1183)
+	at com.st.stm32cube.ide.mcu.ide.ui.project.internal.MCUProjectImporter$ProjectOperation.execute(MCUProjectImporter.java:189)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.lambda$0(WorkspaceModifyOperation.java:110)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2453)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2478)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-10-28 07:46:59.818
+!MESSAGE Indexed 'Noiseux_S' (30 sources, 124 headers) in 5.15 sec: 9,544 declarations; 42,484 references; 4 unresolved inclusions; 37 syntax errors; 192 unresolved names (0.37%)
