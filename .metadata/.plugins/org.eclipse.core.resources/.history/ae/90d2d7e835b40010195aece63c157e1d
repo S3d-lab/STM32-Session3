@@ -3,7 +3,7 @@
 void LCD_Init(void)
 {
 	HAL_Delay(20);
-	LCD_Mode(1, 0);
+	LCD_WriteMode();
 	LCD_write4bits(0x03);
 	HAL_Delay(5);
 	LCD_write4bits(0x03);
@@ -17,6 +17,14 @@ void LCD_Mode(u_int8_t rs, u_int8_t rw)
 
 	HAL_GPIO_WritePin(screen_rs_GPIO_Port, screen_rs_Pin, rs);
 	HAL_GPIO_WritePin(screen_r_w_GPIO_Port, screen_r_w_Pin_Pin, rw);
+
+	return;
+}
+
+void LCD_WriteMode(void)
+{
+	HAL_GPIO_WritePin(screen_rs_GPIO_Port, screen_rs_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(screen_r_w_GPIO_Port, screen_r_w_Pin_Pin, GPIO_PIN_RESET);
 
 	return;
 }

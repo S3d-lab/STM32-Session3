@@ -3,7 +3,7 @@
 void LCD_Init(void)
 {
 	HAL_Delay(20);
-	LCD_Mode(1, 0);
+	LCD_Mode(1, 1);
 	LCD_write4bits(0x03);
 	HAL_Delay(5);
 	LCD_write4bits(0x03);
