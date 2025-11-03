@@ -1,0 +1,10 @@
+#ifndef _ECRAN_H
+#define _ECRAN_H
+
+//Defines
+
+//Functions
+void LCD_Init(void);
+void LDC_Char(u_int8_t);
+
+#endif /*_ECRAN_H*/

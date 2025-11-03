@@ -1,27 +1,41 @@
 #include "main.h"
+#include "stm32f1xx_hal.h"
+#include "ecran.h"
+
+void LCD_Mode(uint8_t rs, uint8_t rw);
+void LCD_write4bits(uint8_t data);
 
 void LCD_Init(void)
 {
-	HAL_Delay(20);
-	LCD_Mode(1, 0);
+	LCD_Mode(0, 0);
 	LCD_write4bits(0x03);
 	HAL_Delay(5);
 	LCD_write4bits(0x03);
 	LCD_write4bits(0x03);
+	HAL_Delay(1);
 	LCD_write4bits(0x02);
-}
 
-void LCD_Mode(u_int8_t rs, u_int8_t rw)
-{
-	// choix du mode  write = 10  read = 11
-
-	HAL_GPIO_WritePin(screen_rs_GPIO_Port, screen_rs_Pin, rs);
-	HAL_GPIO_WritePin(screen_r_w_GPIO_Port, screen_r_w_Pin_Pin, rw);
+	LCD_command(0x28);
+	LCD_command(0x0C);
+	LCD_command(0x01);
+	LCD_command(0x06);
+	HAL_Delay(2);
 
 	return;
 }
 
-void LCD_write4bits(u_int8_t data)
+void LCD_Mode(uint8_t rs, uint8_t rw)
+{
+	// RS	Register Select	Choisit le registre cible (0 = commande, 1 = DDRAM)
+	// RW	Read / Write	Choisit le sens du transfert (0 = ecriture, 1 = lecture)
+
+	HAL_GPIO_WritePin(screen_rs_GPIO_Port, screen_rs_Pin, rs);
+	HAL_GPIO_WritePin(screen_r_w_GPIO_Port, screen_r_w_Pin, rw);
+
+	return;
+}
+
+void LCD_write4bits(uint8_t data)
 {
 	HAL_GPIO_WritePin(screen_d4_GPIO_Port, screen_d4_Pin, (data & 0x01) ? GPIO_PIN_SET : GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(screen_d5_GPIO_Port, screen_d5_Pin, (data & 0x02) ? GPIO_PIN_SET : GPIO_PIN_RESET);
@@ -36,9 +50,20 @@ void LCD_write4bits(u_int8_t data)
 	return;
 }
 
-void LCD_command(u_int8_t data)
+void LCD_command(uint8_t data)
 {
-
+	LCD_Mode(0, 0);
 	LCD_write4bits(data >> 4);
 	LCD_write4bits(data);
+
+	return;
+}
+
+void LCD_Char(uint8_t data)
+{
+	LCD_Mode(1, 0);
+	LCD_write4bits(data >> 4);
+	LCD_write4bits(data);
+
+	return;
 }

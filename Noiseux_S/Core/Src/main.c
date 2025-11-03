@@ -23,6 +23,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "usbd_cdc_if.h"
+#include "ecran.h"
 
 /* USER CODE END Includes */
 
@@ -78,7 +79,10 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  LCD_Init();
+  LCD_command(0x01);
+  LCD_command(0x80);
+  LCD_Char(0x31);
   /* USER CODE END Init */
 
   /* Configure the system clock */

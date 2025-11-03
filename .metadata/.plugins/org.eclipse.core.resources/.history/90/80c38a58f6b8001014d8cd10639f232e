@@ -1,0 +1,12 @@
+#ifndef _ECRAN_H
+#define _ECRAN_H
+
+#include "main.h"
+
+//Defines
+
+//Functions
+void LCD_Init(void);
+void LDC_Char(uint8_t);
+
+#endif /*_ECRAN_H*/

@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (12.3.rel1)
+# Toolchain: GNU Tools for STM32 (13.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -13,6 +13,7 @@ RM := rm -rf
 -include USB_DEVICE/App/subdir.mk
 -include Middlewares/ST/STM32_USB_Device_Library/Core/Src/subdir.mk
 -include Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/subdir.mk
+-include Drivers/TEP-\ Session\ 3\ kit\ 1e/Src/subdir.mk
 -include Drivers/STM32F1xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
@@ -67,8 +68,8 @@ all: main-build
 main-build: Noiseux_S.elf secondary-outputs
 
 # Tool invocations
-Noiseux_S.elf Noiseux_S.map: $(OBJS) $(USER_OBJS) C:\cube\Noiseux_S\STM32F103CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Noiseux_S.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\cube\Noiseux_S\STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Noiseux_S.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Noiseux_S.elf Noiseux_S.map: $(OBJS) $(USER_OBJS) C:\Users\1735593\Desktop\STM32-Session3\Noiseux_S\STM32F103CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Noiseux_S.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\1735593\Desktop\STM32-Session3\Noiseux_S\STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Noiseux_S.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
