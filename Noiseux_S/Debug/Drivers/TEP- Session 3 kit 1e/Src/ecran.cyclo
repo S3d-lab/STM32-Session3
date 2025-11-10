@@ -1,5 +1,0 @@
-../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:8:6:LCD_Init	1
-../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:27:6:LCD_Mode	1
-../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:38:6:LCD_write4bits	1
-../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:53:6:LCD_command	1
-../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:62:6:LCD_Char	1

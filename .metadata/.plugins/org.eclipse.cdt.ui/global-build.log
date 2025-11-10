@@ -1,17 +1,30 @@
-17:59:34 **** Incremental Build of configuration Debug for project Noiseux_S ****
+17:51:11 **** Incremental Build of configuration Debug for project Noiseux_S ****
 make -j6 all 
 arm-none-eabi-gcc "../Drivers/TEP- Session 3 kit 1e/Src/ecran.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I"C:/Users/1735593/Desktop/STM32-Session3/Noiseux_S/Drivers/TEP- Session 3 kit 1e" -I"C:/Users/1735593/Desktop/STM32-Session3/Noiseux_S/Drivers/TEP- Session 3 kit 1e/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/TEP- Session 3 kit 1e/Src/ecran.d" -MT"Drivers/TEP- Session 3 kit 1e/Src/ecran.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/TEP- Session 3 kit 1e/Src/ecran.o"
-arm-none-eabi-gcc -o "Noiseux_S.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\1735593\Desktop\STM32-Session3\Noiseux_S\STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Noiseux_S.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Noiseux_S.elf
- 
-arm-none-eabi-size  Noiseux_S.elf 
-arm-none-eabi-objdump -h -S Noiseux_S.elf  > "Noiseux_S.list"
-arm-none-eabi-objcopy  -O binary Noiseux_S.elf  "Noiseux_S.bin"
-   text	   data	    bss	    dec	    hex	filename
-  31436	    380	   6188	  38004	   9474	Noiseux_S.elf
-Finished building: default.size.stdout
- 
-Finished building: Noiseux_S.bin
- 
-Finished building: Noiseux_S.list
- 
+../Drivers/TEP- Session 3 kit 1e/Src/ecran.c: In function 'LCD_Init':
+../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:28:36: warning: passing argument 2 of 'LCD_CustomChar' makes pointer from integer without a cast [-Wint-conversion]
+   28 |         LCD_CustomChar(0x40, pacman[8]);
+      |                              ~~~~~~^~~
+      |                                    |
+      |                                    uint8_t {aka unsigned char}
+../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:7:51: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'uint8_t' {aka 'unsigned char'}
+    7 | void LCD_CustomChar(uint8_t CGram_adress, uint8_t logo[8]);
+      |                                           ~~~~~~~~^~~~~~~
+../Drivers/TEP- Session 3 kit 1e/Src/ecran.c: At top level:
+../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:76:6: error: conflicting types for 'LCD_CustomChar'; have 'void(uint8_t,  uint8_t **)' {aka 'void(unsigned char,  unsigned char **)'}
+   76 | void LCD_CustomChar(uint8_t CGram_adress, uint8_t *logo[8])
+      |      ^~~~~~~~~~~~~~
+../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:7:6: note: previous declaration of 'LCD_CustomChar' with type 'void(uint8_t,  uint8_t *)' {aka 'void(unsigned char,  unsigned char *)'}
+    7 | void LCD_CustomChar(uint8_t CGram_adress, uint8_t logo[8]);
+      |      ^~~~~~~~~~~~~~
+../Drivers/TEP- Session 3 kit 1e/Src/ecran.c: In function 'LCD_CustomChar':
+../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:82:30: warning: passing argument 1 of 'LCD_Char' makes integer from pointer without a cast [-Wint-conversion]
+   82 |                 LCD_Char(logo[i]);
+      |                          ~~~~^~~
+      |                              |
+      |                              uint8_t * {aka unsigned char *}
+../Drivers/TEP- Session 3 kit 1e/Src/ecran.c:67:23: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   67 | void LCD_Char(uint8_t data)
+      |               ~~~~~~~~^~~~
+make: *** [Drivers/TEP- Session 3 kit 1e/Src/subdir.mk:19: Drivers/TEP- Session 3 kit 1e/Src/ecran.o] Error 1
+"make -j6 all" terminated with exit code 2. Build might be incomplete.
